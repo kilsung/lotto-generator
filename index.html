@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotto Number Generator - 프리미엄 추천기</title>
+    <meta name="description" content="스마트 밸런스, 꿈 해몽 등을 지원하는 고급 로또 번호 추천 앱">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>LOTTO GENERATOR</h1>
+        <p>인공지능 & 통계 기반 프리미엄 번호 추천</p>
+    </header>
+
+    <div class="container">
+        <!-- Main Controls -->
+        <main class="main-section glass-panel">
+            <div class="control-group">
+                <label for="mode-select">추천 모드 (Recommendation Mode)</label>
+                <select id="mode-select">
+                    <option value="random">기본 무작위 (Standard Random)</option>
+                    <option value="balanced">스마트 밸런스 (Smart Balanced)</option>
+                    <option value="dream">꿈 해몽 (Dream Analyzer)</option>
+                </select>
+            </div>
+
+            <div class="control-group" id="dream-input-group">
+                <label for="dream-text">어떤 꿈을 꾸셨나요? (키워드 입력)</label>
+                <input type="text" id="dream-text" placeholder="예: 돼지가 황금 동전을 물고 왔다">
+            </div>
+
+            <button id="generate-btn" class="btn-generate">번호 추출 (DRAW!)</button>
+
+            <div class="result-display" id="result-display">
+                <!-- Balls will be injected here -->
+                <div style="color: var(--text-muted); opacity: 0.5; font-size: 0.9rem; margin: auto;">추출 버튼을 눌러주세요.</div>
+            </div>
+            
+            <div id="stat-display" style="text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: -0.5rem; min-height: 1.2rem;">
+                <!-- Stats injected here -->
+            </div>
+        </main>
+
+        <!-- History & Saved -->
+        <aside class="history-section glass-panel">
+            <h2>최근 추출 이력</h2>
+            <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 1rem;">로컬 저장소에 보관됩니다.</p>
+            <ul class="history-list" id="history-list">
+                <!-- History items injected here -->
+            </ul>
+        </aside>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
